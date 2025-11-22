@@ -75,7 +75,7 @@ body {
 }
 
 .section-shell {
-  margin-top: 2.5rem;
+  margin-top: 2.4rem;
   padding: 1.4rem 1.1rem 1.7rem;
   border-radius: 12px;
   background: rgba(240, 230, 210, 0.85);
@@ -272,7 +272,7 @@ body {
 
 .hero-section {
   margin-top: 1.4rem;
-  padding: 1.4rem 1.1rem 1.7rem;
+  padding: 1.5rem 1.1rem 1.8rem;
   border-radius: 14px;
   background: rgba(240, 230, 210, 0.9);
   box-shadow:
@@ -296,19 +296,52 @@ body {
 .hero-layout {
   display: flex;
   flex-direction: column;
-  gap: 1.3rem;
+  gap: 1.4rem;
 }
 
 .hero-left {
   position: relative;
 }
 
+.hero-left-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+/* Avatar */
+
+.hero-avatar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero-avatar-ring {
+  width: 74px;
+  height: 74px;
+  border-radius: 999px;
+  padding: 3px;
+  background: radial-gradient(circle at 25% 20%, #fdf4e4, #c8a982);
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.35),
+    0 0 0 2px rgba(90, 62, 54, 0.4);
+}
+
+.hero-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  object-fit: cover;
+  filter: saturate(0.85) contrast(1.03);
+}
+
+/* Wax seal */
+
 .wax-seal {
-  position: absolute;
-  right: 0.5rem;
-  top: -0.2rem;
-  width: 72px;
-  height: 72px;
+  width: 68px;
+  height: 68px;
   border-radius: 999px;
   background: radial-gradient(circle at 30% 30%, #7b4b3b, var(--royal-accent));
   box-shadow:
@@ -344,21 +377,26 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(1.9rem, 8vw, 2.7rem);
-  margin: 0.4rem 0 0.5rem;
+  font-size: clamp(2.1rem, 8.4vw, 2.9rem);
+  margin: 0.8rem 0 0.5rem;
   line-height: 1.1;
   word-break: break-word;
 }
 
 .hero-tagline {
-  margin: 0.1rem 0 0.5rem;
-  font-size: 0.95rem;
+  margin: 0.1rem 0 0.4rem;
+  font-size: 1rem;
   color: var(--ink-soft);
 }
 
 .hero-role {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+}
+
+.hero-role-secondary {
+  margin-top: 0.45rem;
+  font-size: 0.9rem;
 }
 
 .label-prefix {
@@ -366,14 +404,14 @@ body {
 }
 
 .soft-skills {
-  margin-top: 0.7rem;
+  margin-top: 0.8rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
 }
 
 .skill-stamp {
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   border-radius: 3px;
@@ -422,7 +460,7 @@ body {
 }
 
 .doc-header {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   border-bottom: 1px solid rgba(181, 154, 118, 0.9);
   padding-bottom: 0.25rem;
   margin-bottom: 0.4rem;
@@ -430,7 +468,7 @@ body {
 
 .doc-body {
   margin: 0.35rem 0;
-  font-size: 0.86rem;
+  font-size: 0.9rem;
 }
 
 /* ============ SECTION HEADINGS ============ */
@@ -441,7 +479,7 @@ body {
 
 .section-title {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   border-bottom: 1px solid rgba(90, 62, 54, 0.8);
   padding-bottom: 0.2rem;
   display: inline-block;
@@ -490,11 +528,11 @@ body {
 }
 
 .card-title {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .card-metric-stamp {
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.09em;
   border-radius: 3px;
@@ -507,7 +545,7 @@ body {
 
 .card-text {
   margin: 0.3rem 0 0.2rem;
-  font-size: 0.86rem;
+  font-size: 0.9rem;
 }
 
 /* ============ ACADEMIC LEDGER ============ */
@@ -530,7 +568,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   margin-bottom: 0.4rem;
 }
 
@@ -544,14 +582,14 @@ body {
 
 .ledger-scroll {
   overflow-x: auto;
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.25rem;
 }
 
 .ledger-table {
   border-collapse: collapse;
   min-width: 420px;
   width: 100%;
-  font-size: 0.8rem;
+  font-size: 0.83rem;
 }
 
 .ledger-table th,
@@ -571,7 +609,7 @@ body {
 
 .status-stamp {
   display: inline-block;
-  font-size: 0.62rem;
+  font-size: 0.65rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 0.14rem 0.4rem;
@@ -590,64 +628,17 @@ body {
 }
 
 .ledger-footer-note {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   margin-top: 0.35rem;
   color: var(--ink-soft);
 }
 
-.ledger-tag {
-  font-style: italic;
-}
-
-/* ============ CONTACT & RADAR ============ */
+/* ============ CONTACT & SOCIAL ============ */
 
 .contact-layout {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-
-.radar-placeholder {
-  border-radius: 10px;
-  border: 1px solid rgba(181, 154, 118, 0.9);
-  background: rgba(250, 244, 230, 0.96);
-  padding: 0.6rem 0.6rem 0.7rem;
-  box-shadow:
-    0 10px 22px rgba(0, 0, 0, 0.28),
-    inset 0 0 0 1px rgba(240, 230, 210, 0.9);
-}
-
-.radar-header {
-  font-size: 0.78rem;
-  border-bottom: 1px solid rgba(181, 154, 118, 0.9);
-  padding-bottom: 0.25rem;
-  margin-bottom: 0.4rem;
-}
-
-.radar-body {
-  font-size: 0.78rem;
-}
-
-.radar-grid {
-  border-radius: 8px;
-  border: 1px dashed rgba(181, 154, 118, 0.85);
-  padding: 0.6rem;
-  min-height: 120px;
-  display: flex;
-  align-items: center;
-}
-
-.radar-note {
-  display: block;
-}
-
-.inline-code {
-  font-family: "Special Elite", "Courier New", monospace;
-  font-size: 0.7rem;
-  background: rgba(90, 62, 54, 0.08);
-  padding: 0.05rem 0.3rem;
-  border-radius: 3px;
-  border: 1px solid rgba(90, 62, 54, 0.5);
 }
 
 .contact-panel {
@@ -657,6 +648,16 @@ body {
 .contact-copy {
   margin-top: 0;
   margin-bottom: 0.7rem;
+}
+
+.contact-group {
+  margin-top: 0.9rem;
+}
+
+.contact-subheading {
+  margin: 0 0 0.25rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.09em;
 }
 
 .contact-buttons {
@@ -682,6 +683,19 @@ body {
   transform: translateY(0);
   transition: transform 0.1s ease-out, box-shadow 0.1s ease-out, background 0.2s ease-out;
 }
+
+.press-button:hover {
+  transform: translateY(-1px);
+  background: radial-gradient(circle at 20% 20%, rgba(255, 249, 236, 0.98), rgba(240, 230, 210, 0.98));
+}
+
+.press-button:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.35),
+    0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
 .press-icon {
   flex-shrink: 0;
   display: flex;
@@ -702,31 +716,8 @@ body {
   gap: 0.06rem;
 }
 
-.contact-group {
-  margin-top: 0.9rem;
-}
-
-.contact-subheading {
-  margin: 0 0 0.25rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.09em;
-}
-
-
-.press-button:hover {
-  transform: translateY(-1px);
-  background: radial-gradient(circle at 20% 20%, rgba(255, 249, 236, 0.98), rgba(240, 230, 210, 0.98));
-}
-
-.press-button:active {
-  transform: translateY(1px);
-  box-shadow:
-    0 1px 0 rgba(0, 0, 0, 0.35),
-    0 4px 10px rgba(0, 0, 0, 0.35);
-}
-
 .press-label {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
 }
 
 .press-subtext {
@@ -777,7 +768,7 @@ body {
   }
 
   .hero-left {
-    padding-right: 0.75rem;
+    padding-right: 0.9rem;
   }
 
   .hero-right {
@@ -792,9 +783,8 @@ body {
     flex-direction: row;
   }
 
-  .radar-placeholder,
   .contact-panel {
-    width: 50%;
+    width: 100%;
   }
 
   .nav-toggle {
@@ -819,5 +809,17 @@ body {
   .nav-links a {
     font-size: 0.7rem;
     padding: 0.25rem 0.35rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero-avatar-ring {
+    width: 82px;
+    height: 82px;
+  }
+
+  .wax-seal {
+    width: 74px;
+    height: 74px;
   }
 }
