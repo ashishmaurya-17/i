@@ -1,0 +1,2 @@
+# i
+reviewing self things 
