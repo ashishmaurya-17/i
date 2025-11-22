@@ -667,9 +667,9 @@ body {
 
 .press-button {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.12rem;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.55rem;
   padding: 0.4rem 0.7rem;
   border-radius: 999px;
   border: 1px solid rgba(90, 62, 54, 0.85);
@@ -682,6 +682,36 @@ body {
   transform: translateY(0);
   transition: transform 0.1s ease-out, box-shadow 0.1s ease-out, background 0.2s ease-out;
 }
+.press-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.press-icon svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.press-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.06rem;
+}
+
+.contact-group {
+  margin-top: 0.9rem;
+}
+
+.contact-subheading {
+  margin: 0 0 0.25rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.09em;
+}
+
 
 .press-button:hover {
   transform: translateY(-1px);
